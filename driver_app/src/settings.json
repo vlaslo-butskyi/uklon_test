@@ -1,0 +1,10 @@
+{
+  "SERVER_HOST": "0.0.0.0",
+  "SERVER_PORT": "8080",
+  "SERVICE_NAME": "Driver App",
+  "FLASK_DEBUG": true,
+  "LOG_LEVEL": "DEBUG",
+  "DB_URL": "postgresql://uklon:test@postgres/uklon-test",
+  "SPEED_LIMIT": 120,
+  "ALTITUDE_LIMIT": 500
+}

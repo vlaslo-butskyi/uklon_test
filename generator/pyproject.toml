@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "Generator"
+version = "0.1.0"
+description = "Generator for drivers' data"
+authors = ["vlaslo-butskyi <vlaslo.butskyi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+geopy = "^2.3.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+serve = "src:main"

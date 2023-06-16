@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "driver-src"
+version = "0.1.0"
+description = "Flask src that analyzes drivers’ data"
+authors = ["vlaslo-butskyi <vlaslo.butskyi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.3.2"
+flask-sqlalchemy = "^3.0.3"
+flask-migrate = "^4.0.4"
+prometheus-client = "^0.17.0"
+flask-restx = "^1.1.0"
+werkzeug = "^2.3.6"
+psycopg2 = "^2.9.6"
+geopy = "^2.3.0"
+prometheus-flask-exporter = "^0.22.4"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.3.0"
+flake8-bugbear = "^23.6.5"
+flake8-builtins = "^2.1.0"
+flake8-docstrings = "^1.7.0"
+pep8-naming = "^0.13.3"
+autoflake = "^2.1.1"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+serve = "src:main"
+
+[tool.isort]
+skip_glob = [".*,cover"]
+line_length = "120"
+atomic = 'true'
+multi_line_output = "3"
+include_trailing_comma = 'true'
+known_pytest = "pytest"
+overwrite_in_place = 'true'
+lines_between_types = "0"
+sections = "FUTURE,STDLIB,PYTEST,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+lines_after_imports = "2"
+force_alphabetical_sort_within_sections = "1"
+
+[tool.black]
+max-line-length = 120
+line-length = 119
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
