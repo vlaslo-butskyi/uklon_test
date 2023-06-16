@@ -8,3 +8,7 @@ Here we have `docker-compose.yaml` that running:
 For run need:
 - `docker compose build`
 - `docker compose up -d`
+
+
+# P.S
+ Мені дуже помітні речі, які тут треба виправити і зарефакторити, але не хотів виходити кудись далеко за часові рамку, тому закінчив на тому, що тут лишив)
